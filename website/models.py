@@ -7,3 +7,6 @@ class Post(models.Model):
     sub_title = models.CharField(max_length=300)
     author = models.CharField(max_length=30)
     content = models.TextField()
+
+    def __str__(self) -> str:
+        return self.title
