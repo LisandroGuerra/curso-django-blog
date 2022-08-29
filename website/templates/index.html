@@ -58,7 +58,7 @@
                     <p>{{post.sub_title}}</p>
                     <span>{{ post.get_categories_display }}</span>
                     <ul class="actions">
-                        <li><a href="#" class="button">Read More</a></li>
+                        <li><a href="{% url 'post_detail' post.id %}" class="button">Read More</a></li>
                     </ul>
                 </article>
                 {% endfor %}
