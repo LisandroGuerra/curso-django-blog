@@ -35,6 +35,12 @@
         <section id="one">
             <header class="major">
                 <h6>{{ post.get_categories_display }}</h6>
+                <span>
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="" width="100px" />
+                    {% endif%}
+                </span>
+
                 <h2>{{post.title}}</h2>
                 <h6>por {{post.author}}</h6>
                 <h3>{{post.sub_title}}</h3>

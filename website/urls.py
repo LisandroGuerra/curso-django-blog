@@ -1,5 +1,4 @@
 from django.urls import path
-
 from website.views import home, post_detail
 
 

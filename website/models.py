@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from turtle import title
 from django.db import models
 
@@ -22,6 +23,7 @@ class Post(models.Model):
         default=Categories.LX,
     )
     approved = models.BooleanField(default=True)
+    image = models.ImageField(upload_to='posts', null=True, blank=True)
 
     def __str__(self) -> str:
         return self.title
